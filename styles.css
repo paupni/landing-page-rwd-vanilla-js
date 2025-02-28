@@ -9,6 +9,7 @@
 
 :root {
   --bg-color: #000;
+  --bg-secondary-color: #121212;
   --text-color: white;
   --main-color: #32baaa;
   --secondary-color: #ccff66;
@@ -202,4 +203,163 @@ section {
   box-shadow: 0 0 20px var(--main-color);
   background-color: var(--main-color);
   color: #000;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--bg-secondary-color);
+}
+
+.about-img img {
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+  background-color: rgba(197, 217, 14, 0.8); /* Red overlay with 50% opacity */
+  mix-blend-mode: difference;
+}
+
+.about-img img:hover {
+  box-shadow: 0 0 25px var(--main-color), 0 0 40px var(--main-color),
+    0 0 80px var(--main-color);
+}
+
+.about-content h2 {
+  font-size: 7rem;
+  text-align: left;
+}
+
+.about-content p {
+  font-size: 1.8rem;
+}
+
+.about-content .btn {
+  margin: 3rem 0;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-secondary-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+  border-radius: 3px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 7rem;
+  margin: 4rem 0;
+}
+
+.cv {
+  background-color: var(--bg-color);
+}
+
+.cv h2 {
+  color: var(--text-color);
+}
+
+.cv-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  gap: 3rem;
+}
+
+.cv-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  height: 600px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.cv-box:hover {
+  background: var(--bg-secondary-color);
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+
+.cv-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem;
+}
+
+.cv-info p {
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.cv-info h4 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.cv-info i {
+  font-size: 8rem;
+}
+
+.projects {
+  background-color: var(--bg-secondary-color);
+}
+
+.projects-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  gap: 7rem;
+  row-gap: 5rem;
+}
+
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.3s ease-in-out;
+}
+
+.projects-card:hover {
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+  transform: scale(1.02);
+}
+
+.projects-card img {
+  max-width: 300px;
+  border-radius: 2em;
+  object-fit: cover;
+}
+
+.projects-card h3 {
+  font-size: 3rem;
+}
+
+.projects-card p {
+  font-size: 1.6rem;
 }
